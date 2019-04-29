@@ -15,7 +15,7 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/gtaxllte/device.mk)
+$(call inherit-product, device/samsung/j5y17lte/device.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -25,20 +25,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_gtaxllte
-PRODUCT_DEVICE := gtaxllte
+PRODUCT_NAME := lineage_j5y17lte
+PRODUCT_DEVICE := j5y17lte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-T585
+PRODUCT_MODEL := SM-J530F
 PRODUCT_MANUFACTURER := samsung
-
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="gtaxllte" \
-    PRODUCT_NAME="gtaxllte" \
-    PRIVATE_BUILD_DESC="gtaxlltexx-user 8.1.0 M1AJQ T585XXU4CRK5 release-keys"
+    TARGET_DEVICE="j5y17lte" \
+    PRODUCT_NAME="j5y17lte" \
+    PRIVATE_BUILD_DESC="samsung/j5y17ltexx/j5y17lte:8.1.0/M1AJQ/J530FXXU3BRL1:user/release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Xiaomi/sagit/sagit:7.1.1/NMF26X/V8.2.17.0.NCACNEC:user/release-keys
+BUILD_FINGERPRINT := samsung/j5y17ltexx/j5y17lte:8.1.0/M1AJQ/J530FXXU3BRL1:user/release-keys
 
 TARGET_VENDOR := Samsung

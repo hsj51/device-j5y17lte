@@ -16,7 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/samsung/gtaxllte
+LOCAL_PATH := device/samsung/j5y17lte
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -317,4 +317,4 @@ $(call inherit-product, hardware/samsung_slsi/exynos7870/exynos7870.mk)
 endif
 
 # call the proprietary setup
-$(call inherit-product, vendor/samsung/gtaxllte/gtaxllte-vendor.mk)
+$(call inherit-product, vendor/samsung/j5y17lte/j5y17lte-vendor.mk)
