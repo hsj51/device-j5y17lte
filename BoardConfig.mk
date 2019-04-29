@@ -58,7 +58,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 
 TARGET_LINUX_KERNEL_VERSION := 3.18
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos7870
-TARGET_KERNEL_CONFIG := lineage-gtaxllte_defconfig
+TARGET_KERNEL_CONFIG := lineage-j5y17lte_defconfig
 
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
@@ -246,8 +246,8 @@ endif
 TARGET_LD_SHIM_LIBS += \
     /system/lib/libexynoscamera.so|libexynoscamera_shim.so
 
-# Security patch level - T585XXU4CRK5
-VENDOR_SECURITY_PATCH := 2018-11-01
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-12-01
 
 SELINUX_IGNORE_NEVERALLOWS := true
 
