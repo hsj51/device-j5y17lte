@@ -14,15 +14,15 @@ service ril-daemon /vendor/bin/hw/rild -c 1 -l /system/lib64/libsec-ril.so
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
     onrestart restart cpboot-daemon
 
-service ril-daemon1 /vendor/bin/hw/rild -c 2 -l /system/lib64/libsec-ril-dsds.so
+service ril-daemon1 /system/bin/rild -c 2 -l /system/lib64/libsec-ril-dsds.so
     class main
     socket rild2 stream 660 root radio
-    socket sap_uim_socket1 stream 660 bluetooth bluetooth
+    socket sap_uim_socket2 stream 660 bluetooth bluetooth
     socket rild-debug2 stream 660 radio system
     user root
     group radio cache inet misc audio log readproc wakelock
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
     disabled
+    onrestart restart cpboot-daemon
 
 on property:ro.multisim.simslotcount=2
     enable ril-daemon1
