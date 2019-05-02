@@ -16,6 +16,19 @@ on post-fs-data
     chown dhcp dhcp /data/misc/dhcp
     chown wifi root /dev/rfkill
 
+
+# Create the directories used by the Wireless subsystem
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/sockets 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
+    mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+
+# copy wpa_supplicant.conf
+    copy /system/vendor/etc/wifi/wpa_supplicant.conf /data/vendor/wifi/wpa/wpa_supplicant.conf
+    chown wifi system /data/vendor/wifi/wpa/wpa_supplicant.conf
+    chmod 0660 /data/vendor/wifi/wpa/wpa_supplicant.conf
+
     # for WIFI TRP/TIS
     mkdir /data/misc/conn 0771 system root
     chown system root /data/misc/conn/.psm.info
