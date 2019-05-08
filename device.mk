@@ -200,9 +200,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:/system/vendor/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_effects.xml:/system/vendor/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_PACKAGES += \
