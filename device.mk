@@ -200,18 +200,22 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths_0.xml \
+    $(LOCAL_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
+    $(LOCAL_PATH)/configs/audio/audio_effects_common.conf:system/vendor/etc/audio_effects_common.conf \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:system/vendor/etc/audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
-    audio.primary.universal7870 \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    audio_amplifier.universal7870_32 \
+    audio.primary.universal7870_32 \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    tinymix \
-    libtinycompress \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl
+    libtfa98xx_32 \
+    libtinycompress
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/vendor/etc/a2dp_audio_policy_configuration.xml \
