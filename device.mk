@@ -147,19 +147,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full \
-    android.hardware.radio@1.0 \
-    android.hardware.radio.deprecated@1.0 \
-    android.hardware.radio.config@1.0-service
-
-PRODUCT_PACKAGES += \
-    rild \
-    libril \
     libsecril-client \
     libsecril-client-sap \
-    libreference-ril
-
-PRODUCT_PACKAGES += \
-    modemloader
+    modemloader\
+    rild \
+    libreference-ril \
+    libril \
+    android.hardware.radio@1.0 \
+    android.hardware.radio.deprecated@1.0
 
 # IPv6
 PRODUCT_PACKAGES += \
@@ -207,15 +202,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:system/vendor/etc/audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl \
-    audio_amplifier.universal7870_32 \
-    audio.primary.universal7870_32 \
+    audio.primary.universal7870 \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    libtfa98xx_32 \
-    libtinycompress
+    tinymix \
+    libtinycompress \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:system/vendor/etc/a2dp_audio_policy_configuration.xml \
